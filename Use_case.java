@@ -21,7 +21,7 @@ public class Use_case extends Basic_Object
 	//constructor 
 	public Use_case(int depth,int left_up_x, int left_up_y)
 	{
-		super(depth);		//�@�}�lset depth ��99 
+		super(depth);		
 		this.left_up_x =left_up_x;
 		this.left_up_y =left_up_y;
 		Conn_Port = new ArrayList();

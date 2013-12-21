@@ -43,14 +43,6 @@ public class UML_Editor_13 extends JFrame {
 	private int button_width = 68;
 	private int button_height = 49;
 	
-	/*Although windows builder has helped you to produce the code
-	*you should move the declaration part here to make an announcement.
-	* Otherwise, other class can't access the JButton reference identifier anymore.
-	* And it would cause you can't control the successive behavior which create by JButton. 
-	*/
-	
-	private static JLabel mouse_pos;
-	
 	protected JButton Select_button;
 	protected JButton Association_button;
 	protected JButton Generalization_button;	
@@ -113,7 +105,8 @@ public class UML_Editor_13 extends JFrame {
 					{
 						UML_Editor_13 frame = new UML_Editor_13();
 						frame.setVisible(true);
-					// �u����o�B���� �~���getGraphics()�o�쥿�T��ø�ϵ��G
+						frame.setResizable(false);					//The frame size is fixed.
+	
 					
 						//INITIALIZE THE DRAWING PLATE TO LET ALL CLASSES CAN DRAW ON THE SAME CANVAS
 						Port.Set_Port_Graphics(canvas.getGraphics()); //This method will return null if this component is currently not displayable.	
@@ -126,7 +119,6 @@ public class UML_Editor_13 extends JFrame {
 	 * Create the frame.
 	 */
 	public UML_Editor_13() {
-		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 728, 687);
 		
@@ -246,13 +238,6 @@ public class UML_Editor_13 extends JFrame {
 		txtCreateUseCase.setBounds(44, 528, 114, 22);
 		getContentPane().add(txtCreateUseCase);
 		txtCreateUseCase.setColumns(10);
-
-		
-//To view the mouse position in the canvas. 
-		mouse_pos = new JLabel();
-		mouse_pos.setBackground(Color.WHITE);
-		mouse_pos.setBounds(10, 23, 158, 15);
-		    getContentPane().add(mouse_pos);
 		
 		canvas.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		canvas.setBackground(Color.WHITE);
@@ -405,18 +390,6 @@ public class UML_Editor_13 extends JFrame {
 			Generalization_button.setBackground(Color.WHITE);
 			Composition_button.setBackground(Color.WHITE);
 			Class_button.setBackground(Color.WHITE);
-			Use_case_button.setBackground(Color.WHITE);
-			
-			
-		}
-		
-	
-		/**
-		 * mouse_pos is just the JLabel
-		 * @param position_in_canvas is a string which represents the coordinate.. 
-		 */
-		public static void set_mouse_pos(String position_in_canvas)
-		{
-			mouse_pos.setText(position_in_canvas);
-		}
+			Use_case_button.setBackground(Color.WHITE);			
+		}		
 }

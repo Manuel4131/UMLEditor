@@ -133,15 +133,6 @@ public class UML_Editor_13 extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu File = new JMenu("FILE");
-		menuBar.add(File);
-		
-		JMenuItem Save = new JMenuItem("SAVE");
-		File.add(Save);
-		
-		JMenu Open = new JMenu("OPEN");
-		File.add(Open);
-		
 		JMenu Edit = new JMenu("EDIT");
 		menuBar.add(Edit);
 		
@@ -211,7 +202,7 @@ public class UML_Editor_13 extends JFrame {
 		Use_case_button = new JButton(use_case_img );
 		Use_case_button.setBackground(Color.WHITE);
 		Use_case_button.setToolTipText("Create an 'Use Case' ");
-		Use_case_button.setBounds(68, 470, 68 , 49 );
+		Use_case_button.setBounds(68, 476, 68 , 49 );
 		getContentPane().add(Use_case_button);
 		
 		txtSelect = new JTextField();
@@ -367,30 +358,6 @@ public class UML_Editor_13 extends JFrame {
 					Use_case_button.setBackground(Color.black);
 				}
 			});
-			
-			//Jmenubar: FILE:
-			//Save action
-			Save.addActionListener(
-					new ActionListener()//anonymous inner class 
-					{
-						public void actionPerformed(ActionEvent e) 
-						{					
-							
-							//Edit_panel.Change_object_name(); //test
-						}//end method actionPerformed.
-					}//end anonymous inner class
-			);//end call to addActionListener
-			
-			//Open action.
-			Open.addActionListener(
-					new ActionListener()//anonymous inner class 
-					{
-						public void actionPerformed(ActionEvent e) 
-						{					
-							//Edit_panel.Change_object_name();//test  
-						}//end method actionPerformed.
-					}//end anonymous inner class
-			);//end call to addActionListener
 			
 			 
 		

@@ -14,14 +14,14 @@ public class Selection_Mode extends Mouse_Mode
 	public void Show_Current_Pos()
 	{
 		mouse_pos_str= "( " + press_x + " , " + press_y + " )";
-		UML_Editor_13.set_mouse_pos( mouse_pos_str);
+		//UML_Editor_13.set_mouse_pos( mouse_pos_str);
 	}
 	
 	//OverLOADING For MouseDrag
 	public void Show_Current_Pos(int drag_x, int drag_y)
 	{
 		mouse_pos_str= "( " + drag_x + " , " + drag_y + " )";
-		UML_Editor_13.set_mouse_pos( mouse_pos_str);
+		//UML_Editor_13.set_mouse_pos( mouse_pos_str);
 	}
 	
 	@Override

@@ -1,4 +1,3 @@
-
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -162,5 +161,3 @@ public class Use_case extends Basic_Object
 		}
 	}
 }//class: Use_case.
-
-

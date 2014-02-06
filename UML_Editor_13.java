@@ -146,7 +146,7 @@ public class UML_Editor_13 extends JFrame {
 		
 		Select_button = new JButton( select_img );
 		Select_button.setBackground(Color.WHITE);
-		Select_button.setBounds(68, 48, 68 , 47);
+		Select_button.setBounds(68, 59, 68 , 43);
 		getContentPane().add(Select_button);		
 		
 		Select_button.setToolTipText("SELECT");	//tooltip
@@ -156,7 +156,7 @@ public class UML_Editor_13 extends JFrame {
 		
 		Association_button = new JButton(association_img);	 // new JButton object. 	
 		Association_button.setBackground(Color.WHITE);
-		Association_button.setBounds(54, 148, 91 , 36 );		  //set the location.
+		Association_button.setBounds(68, 146, 68 , 36 );		  //set the location.
 		getContentPane().add(Association_button);			  //add to JFrame
 		Association_button.setToolTipText("Association Line");//tooltip
 		
@@ -165,7 +165,7 @@ public class UML_Editor_13 extends JFrame {
 		
 		Generalization_button = new JButton(generalization_img);				
 		Generalization_button.setBackground(Color.WHITE);
-		Generalization_button.setBounds(68, 226, 68 , 36 );
+		Generalization_button.setBounds(68, 222, 68 , 36 );
 		getContentPane().add(Generalization_button);
 		Generalization_button.setToolTipText("Generalization Line");
 
@@ -175,7 +175,7 @@ public class UML_Editor_13 extends JFrame {
 		Composition_button = new JButton(composition_img );	
 		Composition_button.setBackground(Color.WHITE);
 		Composition_button.setToolTipText("Composition line");
-		Composition_button.setBounds(68, 304, 68 , 36 );
+		Composition_button.setBounds(68, 304, 68 , 43 );
 		getContentPane().add(Composition_button);
 	
 		//5. Class button
@@ -184,7 +184,7 @@ public class UML_Editor_13 extends JFrame {
 		Class_button = new JButton(class_img);
 		Class_button.setBackground(Color.WHITE);
 		Class_button.setToolTipText("Create a class");
-		Class_button.setBounds(68, 382, 68 , 49 );
+		Class_button.setBounds(68, 384, 68 , 49 );
 		getContentPane().add(Class_button);
 		
 		
@@ -200,42 +200,42 @@ public class UML_Editor_13 extends JFrame {
 		txtSelect = new JTextField();
 		txtSelect.setHorizontalAlignment(SwingConstants.CENTER);
 		txtSelect.setText("Select");
-		txtSelect.setBounds(68, 116, 67, 22);
+		txtSelect.setBounds(33, 107, 144, 22);
 		getContentPane().add(txtSelect);
 		txtSelect.setColumns(10);
 		
 		txtAssociationLine = new JTextField();
 		txtAssociationLine.setHorizontalAlignment(SwingConstants.CENTER);
 		txtAssociationLine.setText("Association Line");
-		txtAssociationLine.setBounds(44, 194, 114, 22);
+		txtAssociationLine.setBounds(33, 188, 144, 22);
 		getContentPane().add(txtAssociationLine);
 		txtAssociationLine.setColumns(10);
 		
 		txtGeneralizationLine = new JTextField();
 		txtGeneralizationLine.setHorizontalAlignment(SwingConstants.CENTER);
 		txtGeneralizationLine.setText("Generalization Line");
-		txtGeneralizationLine.setBounds(44, 272, 114, 22);
+		txtGeneralizationLine.setBounds(33, 269, 144, 22);
 		getContentPane().add(txtGeneralizationLine);
 		txtGeneralizationLine.setColumns(10);
 		
 		txtCompositionLine = new JTextField();
 		txtCompositionLine.setHorizontalAlignment(SwingConstants.CENTER);
 		txtCompositionLine.setText("Composition Line");
-		txtCompositionLine.setBounds(44, 350, 114, 22);
+		txtCompositionLine.setBounds(32, 350, 145, 22);
 		getContentPane().add(txtCompositionLine);
 		txtCompositionLine.setColumns(10);
 		
 		txtCreateAClass = new JTextField();
 		txtCreateAClass.setHorizontalAlignment(SwingConstants.CENTER);
 		txtCreateAClass.setText("Create a class");
-		txtCreateAClass.setBounds(44, 442, 114, 22);
+		txtCreateAClass.setBounds(33, 442, 144, 22);
 		getContentPane().add(txtCreateAClass);
 		txtCreateAClass.setColumns(10);
 		
 		txtCreateUseCase = new JTextField();
 		txtCreateUseCase.setHorizontalAlignment(SwingConstants.CENTER);
 		txtCreateUseCase.setText("Create an Use Case");
-		txtCreateUseCase.setBounds(44, 528, 114, 22);
+		txtCreateUseCase.setBounds(33, 528, 144, 22);
 		getContentPane().add(txtCreateUseCase);
 		txtCreateUseCase.setColumns(10);
 		

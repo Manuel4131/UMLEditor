@@ -477,7 +477,7 @@ public class Edit_panel extends JPanel{
 		
 	//a_new_composite_obj �N�O��A�hGroup �_�Ӫ����Ϊ��� �bUngroup�ɧڷ�M�n�hobject manager ���⥦���� ����]�����n���h 
 		a_new_composite_obj = Group_Obj_History.get(Group_Degree);
-		*/* If I am not wrong, I guess some error happens as using 'Group_Degree' to select the composite object.
+		/* If I am not wrong, I guess some error happens as using 'Group_Degree' to select the composite object.
 		 / The composite_obj is not selected as expected~*/
 		
 		

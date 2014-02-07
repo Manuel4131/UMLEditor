@@ -3,10 +3,7 @@ import java.awt.Graphics;
 
 
 public class Association_line extends Connection_line{
-/* Variables in the parent:
- * 	private Point start_point = new Point();
- *	private Point end_point= new Point();
- */
+
 	public Association_line(){}
 	
 	public Association_line(Port Link_Start_Port, Port Link_End_Port)

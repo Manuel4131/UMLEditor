@@ -1,5 +1,3 @@
-
-
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -7,7 +5,6 @@ import java.util.List;
 
 public abstract class Mouse_Mode implements MouseListener, MouseMotionListener{
 
-	//Instance variable provided for various kind of handling mode
 	/**
 	 * Point to the Canvas Object!
 	 */
@@ -32,15 +29,12 @@ public abstract class Mouse_Mode implements MouseListener, MouseMotionListener{
 		canvas = canvas_;
 	}
 	
-	/**
-	 * �M��F��drawing_class�R�W�]�p�� method. ��L ������call �o��method. 
-	 */
 	public drawing_class Get_Pressed_Obj(){return null;}
 	
 	@Override
 	public void mousePressed(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 	
 	@Override

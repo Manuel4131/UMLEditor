@@ -7,8 +7,6 @@ import java.util.List;
 public class Composite_Object extends drawing_class{
    
 	public List<Connection_line > a_inner_line_record; 
-	
-	/**�]�t�F����drawing_class(Shape)���� */
 	private List<drawing_class> Containing_Obj = new ArrayList<drawing_class>();
 	
 	public Composite_Object(int depth) 
@@ -16,9 +14,8 @@ public class Composite_Object extends drawing_class{
 			super(depth);
     }
 	
-	/**
-	 * �s�W�[�@�Ӫ���[�J��Composite Object 
-	 * @param added_obj: �Q�[�J������
+	/** 
+	 * @param added_obj
 	 */
 	@Override
 	public void Add_An_Obj(drawing_class added_obj)
@@ -28,7 +25,7 @@ public class Composite_Object extends drawing_class{
 	}
 	
 	/**
-	 * ��Composite Object�]���F�� �^��
+	 * Composite Object
 	 * @return
 	 */
 	@Override 
@@ -38,7 +35,7 @@ public class Composite_Object extends drawing_class{
 	}
 
 	/**
-	 * ��Composite object �Q�I��n���ʮɡA�n�Ҧ���Containing_obj �@�_���update coordinate 
+	 * Update left up side coordinate. 
 	 */
 	@Override 
 	public void update_left_up_coo(Point move_vector)
@@ -49,9 +46,6 @@ public class Composite_Object extends drawing_class{
 		}
 	}
 	
-	/**
-	 * ��Composite object �Q�I��n���ʮɡA���C�@Containing_obj ��Port��coordinate �]�n�@�_��s�I
-	 */
 	@Override 
 	public void Update_Object_Port_Coo(Point move_vector)
 	{
@@ -61,9 +55,6 @@ public class Composite_Object extends drawing_class{
 		}
 	}
 	
-	/**
-	 * �s�C��Containing_Obj ������h�ۤv����
-	 */
 	public void draw() 
 	{
 		for(int i = Containing_Obj.size() -1 ; i>= 0;i--)
@@ -89,11 +80,7 @@ public class Composite_Object extends drawing_class{
 				return false;
 	}
 	
-	/**
-	 * For any element in the Containing_Obj is selected, all the elements should be set "selected"  
-	 * �w�墨�Ǧbregion select ��object�Ө��Ais_selected �|�����Qset true�A�B�ۤv�o��composite object is_selected �]�|�Qset true, �ٷ|���L�S���Q
-     *  Group �_�Ӫ�object ��is_selected set false. 
-	 */
+	
 	public boolean update_objects_state(int x, int y)
 	{
 		int index = Containing_Obj.size() - 1;
@@ -175,15 +162,13 @@ public class Composite_Object extends drawing_class{
 	//To find out if "composite object" is selected or not. 
 		for(int i = Containing_Obj.size() -1 ; i>= 0;i--)
 		{
-	 //�����ˬd�� ���@�Ӥ��b�d�� �N���O�b�d�� �]�N�O traversal �J�� �@��false �N����F��
+	
 			if( Containing_Obj.get(i).is_selected== false)
 			{
 				this.is_selected = false; 
 				return false;
 			}
-		}
-		
-     //�_�h�N�O�]�����b�d�򤺡^<---�]- �u�n���@�^	
+		}	     	
 		this.is_selected = true; 
 		return true;
 	}

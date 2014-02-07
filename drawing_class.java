@@ -1,32 +1,18 @@
-
-
-/**
- * drawing_class is "SHAPE" �@�}�l�W�r�S���n
- */
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JPanel;
-
-
-//SHIT I have to pause right here. 11:11 2011
-//thinking the association relation to class Port.
 public class drawing_class  implements Comparable<drawing_class>{
 	
 	public int Depth = 99;	//�̲`
 	public boolean is_selected = false;
 	public static Graphics draw13 ;			//private variable "can't"" be inherited.
-	/**
-	 * �@�}�l�����]�S����return false;
-	WHY CAN"T I add 	@Override here??? WHY IS THAT? ANY side effect?
-	*/
 	public boolean is_selected(int press_coordinate_x,int press_coordinate_y ){return false;};
-	
 	public void draw(){};
 	public void Set_depth(){};
-	
+
 	//pure declaration, no hoping to use this method.
 	public Point Get_connection_point(int x, int y) {return new Point(-1,-1);};	
 	public int get_left_up_x()	{return 0;}		
@@ -40,13 +26,11 @@ public class drawing_class  implements Comparable<drawing_class>{
 	//pure for overridden 
 	public void update_left_up_coo(Point moving_vector){}; 
 	public List<Connection_line > connection_line_list = new ArrayList<Connection_line >(); 
-	public String object_name= " ";  		//�����ܼƳ��ninitialize ���D�A�������C��ref�@�}�l���O����null??? �A�n�h�Ҽ{�L�Ĥ@�ӳQini���ɾ��A 
-											//""�׶}�i��null�Q�s���� �i�O���ꤣ���Ӧs��null�����ΡI �A�@�}�l��initialize ���� �@mode5 ���W�S�F���i�H�e �ܦ�Nullexception.
+	public String object_name= " ";  		
 	public Port Get_Connection_Port(int input_x, int input_y ){return new Port();}
 	
 	//Constructor
 	public drawing_class(){}
-	
 	public drawing_class(int depth)
 	{
 		Depth  = depth;
@@ -72,10 +56,6 @@ public class drawing_class  implements Comparable<drawing_class>{
 		this.object_name = object_name;
 	}
 
-	
-	
-	//�`���M�o��drawing_class���۳s���u �H������ ��move�᪺�������i�Hwork
-	//CRITICAL!!! THIS IS a REFERENCE LIST. AND IT CAN ONLY BE REFERENCE LIST. NO OBJECT LIST IS ALLOWED.
 	public void add_the_connection_line(Connection_line a_new_connection_line)
 	{
 		connection_line_list.add(a_new_connection_line);
@@ -87,7 +67,6 @@ public class drawing_class  implements Comparable<drawing_class>{
 	public void select()
 	{
 		is_selected = true;
-		
 	}
 	
 	/**
@@ -102,7 +81,6 @@ public class drawing_class  implements Comparable<drawing_class>{
 		return false;
 	}
 	   
-	//�Ǫ��ӱФp���|�^�ǥ��� �~�|���Ѳ`���L��sort.
 	@Override		
 	public int compareTo(drawing_class n) 
 	{
@@ -118,8 +96,8 @@ public class drawing_class  implements Comparable<drawing_class>{
 		return it_is_null; 
 	}
 		
-	//For "upcolating up". 
-	public void Update_Object_Port_Coo(Point move_vector){};	//Move:: MouseDrag
+	//For upcasting. 
+	public void Update_Object_Port_Coo(Point move_vector){};
 	public void set_draw_port_true(){};
 	public void Draw_Link_Lines(){};
 	public void Add_An_Obj(drawing_class added_obj){};

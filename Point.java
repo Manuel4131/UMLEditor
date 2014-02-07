@@ -1,5 +1,3 @@
-
-//�L�٬O���ۤv�Ǫ���� �]���ڦ��Ӧh�Ȼs�ƪ��n�D�F? 
 public class Point {
 	
 	private double x = 0;
@@ -71,7 +69,6 @@ public class Point {
 		return new Point( (x *  d), y *  d);
 	}
 	
-	//�䤤�@�䪺normal vector �Y�i  
 	public Point Normal_vector()
 	{
 		return new Point( -1* y, x);

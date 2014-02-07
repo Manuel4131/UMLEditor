@@ -1,5 +1,3 @@
-
-
 import java.awt.event.MouseEvent;
 
 public class Gen_Line_Mode extends  Mouse_Mode
@@ -11,9 +9,9 @@ public class Gen_Line_Mode extends  Mouse_Mode
 	public Gen_Line_Mode()
 	{
 		System.out.println("GeneralizationLineMode.");
-	  //To get Current_object_status in the first place.	 
 		Current_object_status = canvas.get_Current_Obj_Status(); 
 	}
+
 	@Override 
 	public void mousePressed(MouseEvent e) 
 	{
@@ -21,11 +19,8 @@ public class Gen_Line_Mode extends  Mouse_Mode
 		press_y = e.getY();
 		press_obj = canvas.Return_Pressed_Obj(press_x , press_y );
 		//Guard.
-		if(press_obj == null)
-		{
-			System.out.println("����@�}�l�N�I���ťճB�A�n�I�쪫��~��ؽu");
-			return; 
-		}
+		if(press_obj == null) return; 
+		
 		Link_Starts_From_O = press_obj;
 		Link_Starts_From_P  = press_obj.Get_Connection_Port(press_x , press_y );
 		System.out.println("The coordinate of the connection port is:( " + Link_Starts_From_P.get_port_center().getX() +"," + Link_Starts_From_P.get_port_center().getY()+ ")");
@@ -37,29 +32,18 @@ public class Gen_Line_Mode extends  Mouse_Mode
 		released_x = e.getX();
 		released_y = e.getY();
 		released_obj = canvas.Return_Pressed_Obj(released_x , released_y);
-		if(released_obj == null)
-		{
-			System.out.println("�S����u����b����W�I�A�L�k�ؽu");
-			return; 
-		}
+		if(released_obj == null) return; 
+		
 		Link_Ends_At_O = released_obj ;
 		Link_Ends_At_P  = released_obj.Get_Connection_Port(released_x , released_y);
 		System.out.println("The coordinate of the connection port is:( " + Link_Ends_At_P.get_port_center().getX() +"," + Link_Ends_At_P.get_port_center().getY()+ ")");
 		
 		//Guard
-		if(Link_Starts_From_O == null ||Link_Ends_At_O == null || Link_Starts_From_O == Link_Ends_At_O )
-		{
-			System.out.println("�����O���`���ؽu�欰");
-			return ; 
-		}
+		if(Link_Starts_From_O == null ||Link_Ends_At_O == null || Link_Starts_From_O == Link_Ends_At_O ) return; 
 		else														//to create a new generalization line.
 		{
 			A_New_Gen_Line = new Generalization_line( Link_Starts_From_P,Link_Ends_At_P );
-			//�Х�[�^canvas
 			canvas.Add_To_Line_Mang(A_New_Gen_Line );
-			
-			
-			//�A������ �ڤ����A
 			A_New_Gen_Line.Get_Start_Port().Add_Link_Lines(A_New_Gen_Line );
 			A_New_Gen_Line.Get_End_Port().Add_Link_Lines(A_New_Gen_Line );
 			A_New_Gen_Line.draw();			

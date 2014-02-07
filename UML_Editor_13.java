@@ -1,5 +1,5 @@
 
-//Hi, �ڬO008 �]�N�O�A��xd....�ںƤF...
+
 
 
 import java.awt.BorderLayout;
@@ -92,7 +92,7 @@ public class UML_Editor_13 extends JFrame {
 	
 	public static  Edit_panel canvas = new Edit_panel(); 
 	//private int JFrame_width = 
-
+	
 	/**
 	 * Launch the application.
 	 */
@@ -106,16 +106,12 @@ public class UML_Editor_13 extends JFrame {
 						UML_Editor_13 frame = new UML_Editor_13();
 						frame.setVisible(true);
 						frame.setResizable(false);					//The frame size is fixed.
-	
-					
-						//INITIALIZE THE DRAWING PLATE TO LET ALL CLASSES CAN DRAW ON THE SAME CANVAS
-						Port.Set_Port_Graphics(canvas.getGraphics()); //This method will return null if this component is currently not displayable.	
-																	  //http://docs.oracle.com/javase/6/docs/api/java/awt/Component.html#getGraphics%28%29
+						Port.Set_Port_Graphics(canvas.getGraphics()); 	
 					}
 				} );
 	}
 
-	/*
+	/**
 	 * Create the frame.
 	 */
 	public UML_Editor_13() {
@@ -242,28 +238,15 @@ public class UML_Editor_13 extends JFrame {
 		canvas.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		canvas.setBackground(Color.WHITE);
 		canvas.setBounds(panel_start_x, panel_start_y, panel_width , panel_height);
-		getContentPane().add(canvas);	
- 
-		//�@�}�l�Npass canvas object ��Mouse_Mode��canvas�h�� 
-		Mouse_Mode.set_canvas(canvas); 
-
-		    
-//EVENT HANDLING.
-   
-	//JButton Event Wait.
-	//�@�}�l�� �N���ӭn�]�w�n JButton ��L�̳B�bwait���A���ݦ�press��action �o��
-    //�ҥH��bGUI�� default constructor.
-			
+		getContentPane().add(canvas); 
+		Mouse_Mode.set_canvas(canvas);
+   		
 			Select_button.addActionListener(new ActionListener(){ 
 			  public void actionPerformed(ActionEvent e){
-			  //Remove the last mouse event:
-				  canvas.Remove_Mouse_Event();
-			  //Exchange switch to Command Line method 
-				  canvas.Set_Mouse_Event(new Selection_Mode());
-		// !!!!!!!!!!!!! Set Condition!!!!!!!!!!!!!
+	
+				  canvas.Remove_Mouse_Event();							  //Remove the last mouse event:
+			  	  canvas.Set_Mouse_Event(new Selection_Mode());				//Exchange switch to Command Line method 
 				  canvas.set_MODE(1);
-				  
-		// SHOW black or white.
 				  reset_back_color();				  
 				  Select_button.setBackground(Color.black);
 			  }
@@ -271,28 +254,23 @@ public class UML_Editor_13 extends JFrame {
 		    
 			Association_button.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-				//Remove the last mouse event:
-					  canvas.Remove_Mouse_Event();
-				//Exchange switch to Command Line method 
-					  canvas.Set_Mouse_Event(new AssociationLineMode());
-					
+					  canvas.Remove_Mouse_Event();					//Remove the last mouse event
+					  canvas.Set_Mouse_Event(new AssociationLineMode());	//Exchange switch to Command Line method
 					  canvas.set_MODE(2);
-					 Association_line.set_Draw(canvas.getGraphics());
-					reset_back_color();
-					Association_button.setBackground(Color.black);
-				}
+					  Association_line.set_Draw(canvas.getGraphics());
+					  reset_back_color();
+					  Association_button.setBackground(Color.black);
+				} 
 			});
 		    
 			Generalization_button.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-				//Remove the last mouse event:
-					  canvas.Remove_Mouse_Event();
-				//Exchange switch to Command Line method 
-					  canvas.Set_Mouse_Event(new Gen_Line_Mode());
+					  canvas.Remove_Mouse_Event();		//Remove the last mouse event:
+					  canvas.Set_Mouse_Event(new Gen_Line_Mode());	//Exchange switch to Command Line method
      				  canvas.set_MODE(3);
 					
 					//Set graphics. 
-					//Generalization_line a_line = new Generalization_line();
+					
 					Generalization_line.set_Draw(canvas.getGraphics());
 					reset_back_color();		
 					Generalization_button.setBackground(Color.black);
@@ -307,7 +285,6 @@ public class UML_Editor_13 extends JFrame {
 					  canvas.Set_Mouse_Event(new Cmp_Line_Mode());
    					  canvas.set_MODE(4);
 					
-					//Composition_line a_line = new Composition_line();
 					Composition_line.set_Draw(canvas.getGraphics());
 					reset_back_color();		
 					Composition_button.setBackground(Color.black);
@@ -323,39 +300,26 @@ public class UML_Editor_13 extends JFrame {
 					  canvas.set_MODE(5);
 					reset_back_color();
 					Shape.set_which_Panel_to_be_drawn(canvas.getGraphics());
-					
-					//��Depth �ǵ�Edit_panel ��Depth �M�ᶶ�z������-1			
 					Class_button.setBackground(Color.black);
 				}
 			});
 			
 			Use_case_button.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					
 					canvas.Remove_Mouse_Event();
-					 //Exchange "switch case" to Command Line method 
 					canvas.Set_Mouse_Event(new Draw_UC_Mode());
-					
 					canvas.set_MODE(6);
 					reset_back_color();
-					
 					Use_case.set_which_Panel_to_be_drawn(canvas.getGraphics());
 					Use_case_button.setBackground(Color.black);
 				}
 			});
-			
-			 
-		
-			//Jmenubar: Edit:
-			//ChangeObjName:
 			ChangeObjName.addActionListener(
-					new ActionListener()//anonymous inner class 
+					new ActionListener() 
 					{
 						public void actionPerformed(ActionEvent e) 
 						{			
-							// YOU CAN'T PUT THIS STATEMENT ABOVE //Jmenubar: Edit:
-							//just_use.set_graphics(canvas.getGraphics());
-							canvas.Change_object_name(); //test
+							canvas.Change_object_name(); 
 						}//end method actionPerformed.
 					}//end anonymous inner class
 			);//end call to addActionListener
@@ -382,7 +346,6 @@ public class UML_Editor_13 extends JFrame {
 					}//end anonymous inner class
 			);//end call to addActionListener
 	}
-	
 		public void reset_back_color()
 		{
 			Select_button.setBackground(Color.WHITE);

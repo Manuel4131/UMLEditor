@@ -5,12 +5,12 @@ import java.util.List;
 public class Basic_Object extends drawing_class
 {
 	//CD's width and height 
-	public final int CD_width = 60;  //class �T�w�e60
-	public final int CD_height = 80; //class �T�w��80
+	public final int CD_width = 60;  
+	public final int CD_height = 80; 
 	
 	//Use case's  width and height
-	public final int UC_width = 67;  //use_case �T�w�e41
-	public final int UC_height = 41; //use_case �T�w��31
+	public final int UC_width = 67;  
+	public final int UC_height = 41; 
 	
 	//The left up coordinate of the basic object.
 	public int left_up_x = 0;
@@ -24,9 +24,6 @@ public class Basic_Object extends drawing_class
 		super(depth);
 	}
 	
-	/**
-	 * ��Ҧ�port ��draw ���]��false �Ϥ����i�H�Q��  
-	 */
 	@Override 
 	public void set_draw_port_false()
 	{
@@ -36,10 +33,7 @@ public class Basic_Object extends drawing_class
 		}
 	}
 	
-	/**
-	 * ��Ҧ�port ��draw ���]��true �Ϥ��i�H�Q��  
-	 */
-	@Override 
+	@Override   
 	public void set_draw_port_true()
 	{
 		for(int i= 0; i< Conn_Port.size(); i++)
@@ -66,18 +60,13 @@ public class Basic_Object extends drawing_class
 		this.left_up_y = left_up_y;
 	}
 
-	/**
-	 *  Move:�ǤJ���ʦV�q ��s���W���y��
-	 */
+
 	@Override
 	public void update_left_up_coo(Point moving_vector) {
 		this.left_up_x = this.left_up_x +  (int)moving_vector.getX();
 		this.left_up_y = this.left_up_y +  (int)moving_vector.getY();
 	}
 	
-	/**
-	 *  Move:�ǤJ���ʦV�q ��sPort�y��
-	 */
 	
 		public Port Update_Port; 
 		@Override
@@ -89,16 +78,9 @@ public class Basic_Object extends drawing_class
 			}
 			return ; 
 		}
-	/**
-	 * �e�X�M�@��basic object �Ҧ��۳s��connection lines
-	 */
-	
 	private List<Connection_line> group_of_link_lines; 
 	private Connection_line a_line; 
-	
-	/**
-	 * �h�e�X�M�@��Basic Object �۳s���Ҧ��u 
-	 */
+
 	@Override 
 	public void Draw_Link_Lines()
 	{
@@ -111,5 +93,4 @@ public class Basic_Object extends drawing_class
 			}
 		}
 	}//Draw_Link_Lines()
-	
 }

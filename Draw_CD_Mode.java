@@ -1,5 +1,3 @@
-
-
 import java.awt.event.MouseEvent;
 
 //Draw CLASS DIAGRAM Mode. 
@@ -23,11 +21,9 @@ public class Draw_CD_Mode  extends Mouse_Mode
 	//add to Current_object_status13 in CANVAS
 		canvas.get_Current_Obj_Status().add(a_class);
 	//After updating, just to draw; THE PRINCIPLE: 1. Logic 2. Update Properties 3. Draw the new status of the obj. 
-		a_class.draw();
-		
+		a_class.draw();		
 	}
 	
-	//the following actions are useless for drawing a class diagram on Panel
 	@Override
 	public void mouseDragged(MouseEvent arg0) {
 		// TODO Auto-generated method stub

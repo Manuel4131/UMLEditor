@@ -13,13 +13,10 @@ public class Shape extends Basic_Object
  *  public static Graphics draw13;			//private variable "can't"" be inherited.
 	public List<Port> show_selection_port = new ArrayList<Port>(); //name this since you can represent an object is selected by showing more ports of it. 
 	public boolean is_selected = false;
- */
-	
-	//Paret's variable: 	//public List<Port> Conn_Port; 
-	
-	private final int first_separate_line_distance= 30;	//�Ĥ@��j���u ���̤W����u���Z�� 
-	private final int second_separate_line_distance= 55;//�ĤG��j���u ���̤W����u���Z��
-	private final int draw_obj_name_shift_x = 13; //��left_up_x left_up_y ��_�Ӫ��۹�첾 �[�W�h �N�Oobject name �e��m�m
+ */	
+	private final int first_separate_line_distance= 30;	 
+	private final int second_separate_line_distance= 55;
+	private final int draw_obj_name_shift_x = 13;
 	private final int draw_obj_name_shift_y = 13;
 	private Port draw_port; 
 
@@ -34,11 +31,10 @@ public class Shape extends Basic_Object
 	
 	public void Create_Port()
 	{
-		//��port
-				Conn_Port.add(new Port(left_up_x, left_up_y + CD_height/2));		   //Region 1 port
-				Conn_Port.add(new Port(left_up_x+ CD_width/2, left_up_y + CD_height)); //Region 2 port
-				Conn_Port.add(new Port(left_up_x+ CD_width, left_up_y + CD_height/2)); //Region 3 port
-				Conn_Port.add(new Port(left_up_x+ CD_width/2, left_up_y ));			   //Region 4 port
+				Conn_Port.add(new Port(left_up_x, left_up_y + CD_height/2));		   	//Region 1 port
+				Conn_Port.add(new Port(left_up_x+ CD_width/2, left_up_y + CD_height)); 	//Region 2 port
+				Conn_Port.add(new Port(left_up_x+ CD_width, left_up_y + CD_height/2)); 	//Region 3 port
+				Conn_Port.add(new Port(left_up_x+ CD_width/2, left_up_y ));			   	//Region 4 port
 	}
 	public Point get_right_down() 
 	{
@@ -54,16 +50,11 @@ public class Shape extends Basic_Object
 	{
 		if( ( (left_up_x <= press_coordinate_x) && (press_coordinate_x <= left_up_x + this.CD_width) )  &&((left_up_y <= press_coordinate_y )&&(press_coordinate_y <= left_up_y + this.CD_height) ) )
 		{
-			
 			return true;
 		}
-		
-		return false; 
+			return false; 
 	}
 	
-	/**
-	 * �p�G������b���rectangular�d�� �hreturn true �_�hreturn false. �ǤJ���i�Orectangle.
-	 */
 	@Override	
 	public boolean update_range_obj_state(Rectangle selection_range) 
 	{
@@ -74,7 +65,6 @@ public class Shape extends Basic_Object
 		}
 		else
 		{
-			
 			is_selected = false;
 			return false; 
 		}		
@@ -131,7 +121,8 @@ public class Shape extends Basic_Object
 			return null; 
 		}		
 	}
-	public void de_Get_connection_point_bug(int region)//, int x_coo, int y_coo)
+	
+	public void de_Get_connection_point_bug(int region)
 	{
 		System.out.print("In region:" + region+"\n");
 	}
@@ -139,8 +130,8 @@ public class Shape extends Basic_Object
 	{
 		draw13 = point_to;		
 	}
+	
 	@Override
-	//the parameters stands for the left-up point's coordinate. 
 	public void draw() {
 		// TODO Auto-generated method stub
 
@@ -148,7 +139,6 @@ public class Shape extends Basic_Object
 		draw13.fillRect(left_up_x, left_up_y, CD_width, CD_height);
 		draw13.setColor(Color.BLACK);
 		draw13.drawRect(left_up_x, left_up_y, CD_width, CD_height);
-		
 		draw13.setColor(Color.BLACK);
 		draw13.drawLine(left_up_x, left_up_y + first_separate_line_distance,left_up_x + CD_width , left_up_y + first_separate_line_distance);
 		draw13.drawLine(left_up_x, left_up_y + second_separate_line_distance, left_up_x + CD_width , left_up_y + second_separate_line_distance);
@@ -161,8 +151,7 @@ public class Shape extends Basic_Object
 				Conn_Port.get(i).draw_port();
 			}
 		}
-		//draw object name part.
+	//Give the class a name: Animal, Dog...
 		draw13.drawString(object_name, left_up_x + draw_obj_name_shift_x, left_up_y + draw_obj_name_shift_y);
 	}
 }
-

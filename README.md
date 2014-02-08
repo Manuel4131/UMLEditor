@@ -18,12 +18,27 @@ it included several typical evnets like **mousePressed**,  **mouseDragged**, **m
 
 But they are all empty method. As a new state is created, it can override these methods to perform particular tasks.
 
+By adopting this pattern, code is much easier to be maintianed.
 
+## Agent
 
-
-
+You can use some IDE tools like [Eclipse] to run this application.
+ 
+### How to run?
+ 
+* Download an IDE like **Eclipse**.
+* Create a new project and include these source code.
+* Run. (Ctr+F11) for Eclipse.
+ 
+### How to edit?
+ 
+* Utilizing the add-on [Window Builder] can save you lots of time in GUI design.
+ 
+## Future release
+ 
 [UML]:http://en.wikipedia.org/wiki/Unified_Modeling_Language
 [OOP]:http://en.wikipedia.org/wiki/Object-oriented_programming
 [Design Pattern]:http://en.wikipedia.org/wiki/Software_design_pattern
 [state design pattern]:http://en.wikipedia.org/wiki/State_pattern
-
+[Eclipse]:http://www.eclipse.org/downloads/
+[Window Builder]:http://download.eclipse.org/windowbuilder/WB/release/R201309271200/4.2/

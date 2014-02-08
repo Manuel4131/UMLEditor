@@ -6,7 +6,7 @@ UMLEditor is created by Java. It adopts the concept of [OOP] and [Design Pattern
 
 
 
-
+fuck
 
 [UML]:http://en.wikipedia.org/wiki/Unified_Modeling_Language
 [OOP]:http://en.wikipedia.org/wiki/Object-oriented_programming

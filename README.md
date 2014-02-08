@@ -35,8 +35,12 @@ You can use some IDE tools like [Eclipse] to run this application.
 ### How to edit?
  
 * Utilizing the add-on [Window Builder] can save you lots of time in GUI design.
+
+### How to use?
+
+Reference to the video: http://youtu.be/vGaPWrXgALE
  
-## Future release
+# Future release
  
 The current version is implemented by Java. Nevertheless, the future version will be created by C++.
   

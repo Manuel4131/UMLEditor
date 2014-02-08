@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This application is designed for creating [UML](Unified Modeling Language) diagrams.
+This application is designed for creating [UML] (Unified Modeling Language) diagrams.
 
 UMLEditor Ver 1.0 is created by Java. It adopts the fundamental [OOP] concept: abstraction, encapsulation 
 

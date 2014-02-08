@@ -38,6 +38,14 @@ You can use some IDE tools like [Eclipse] to run this application.
  
 ## Future release
  
+The current version is implemented by Java. Nevertheless, the future version will be created by C++.
+  
+Creating the same application by various language can force you rethink your design and you will
+
+compare C++ and Java OOP concept. They are still something very different!                         
+  
+I will open a new project to the next version
+
 [UML]:http://en.wikipedia.org/wiki/Unified_Modeling_Language
 [OOP]:http://en.wikipedia.org/wiki/Object-oriented_programming
 [Design Pattern]:http://en.wikipedia.org/wiki/Software_design_pattern

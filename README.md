@@ -48,7 +48,7 @@ Creating the same application by various language can force you rethink your des
 
 compare C++ and Java OOP concept. They are still something very different!                         
   
-I will open a new project to the next version
+I will open a new project for the next version.
 
 
 [OOP]:http://en.wikipedia.org/wiki/Object-oriented_programming

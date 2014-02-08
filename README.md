@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This application is designed for creating [UML] (Unified Modeling Language) diagrams.
+This application is designed for creating [UML] (http://en.wikipedia.org/wiki/Unified_Modeling_Language) diagrams.
 
 UMLEditor Ver 1.0 is created by Java. It adopts the fundamental [OOP] concept: abstraction, encapsulation 
 
@@ -46,7 +46,7 @@ compare C++ and Java OOP concept. They are still something very different!
   
 I will open a new project to the next version
 
-[UML]:http://en.wikipedia.org/wiki/Unified_Modeling_Language
+
 [OOP]:http://en.wikipedia.org/wiki/Object-oriented_programming
 [Design Pattern]:http://en.wikipedia.org/wiki/Software_design_pattern
 [state design pattern]:http://en.wikipedia.org/wiki/State_pattern

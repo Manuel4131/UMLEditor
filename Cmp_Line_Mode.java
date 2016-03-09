@@ -1,4 +1,4 @@
-
+// Author: mchang
 import java.awt.event.MouseEvent;
 
 public class Cmp_Line_Mode extends Mouse_Mode

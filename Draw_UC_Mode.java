@@ -1,4 +1,4 @@
-
+// To implement the Mouse_Mode interface
 
 import java.awt.event.MouseEvent;
 

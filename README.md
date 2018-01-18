@@ -2,15 +2,12 @@
 
 ## Introduction
 
-This application is designed for creating [UML] (http://en.wikipedia.org/wiki/Unified_Modeling_Language) diagrams.
+   UML diagram generator 1.0 is implemented in Java. The purpose is not only to generate workable UML diagrams but also to 
+   write an application with the system design document. It also adopts the fundamental [OOP] concept: abstraction, encapsulation, inheritance and polymorphism and a simple design pattern [state design pattern].
 
-UMLEditor Ver 1.0 is created by Java. It adopts the fundamental [OOP] concept: abstraction, encapsulation 
-
-,inheritance and polymorphism. Also, some design patterns are applied to this project, like [state design pattern].
-
-There are lots of tools in UMLeditor and each one corresponds to a state. For instance, the selection tool is to
+There are many functions in this UMLeditor and each one corresponds to a state. For instance, the selection tool is to
  
-select serveral class or use-case diagrams. And the generalization tool is to create a 'is-a' relationship between
+select serveral class or use-case diagrams and the generalization tool is to create a 'is-a' relationship between
  
 classes by drawing a line. To complete this functionality, typically we need to use lots of **switch** **case**. 
  
@@ -24,7 +21,7 @@ By adopting this pattern, code is much easier to be maintianed.
 
 ## Agent
 
-You can use some IDE tools like [Eclipse] to run this application.
+Use some java GUI like [Eclipse] to run this application.
  
 ### How to run?
  
@@ -39,17 +36,6 @@ You can use some IDE tools like [Eclipse] to run this application.
 ### How to use?
 
 Reference to the video: http://youtu.be/vGaPWrXgALE
- 
-# Future release
- 
-The current version is implemented by Java. Nevertheless, the future version will be created by C++.
-  
-Creating the same application by various language can force you rethink your design and you will
-
-compare C++ and Java OOP concept. They are still something very different!                         
-  
-I will open a new project for the next version.
-
 
 [OOP]:http://en.wikipedia.org/wiki/Object-oriented_programming
 [Design Pattern]:http://en.wikipedia.org/wiki/Software_design_pattern

@@ -3,7 +3,10 @@
 ## Introduction
 
    UML diagram generator 1.0 is implemented in Java. The purpose is not only to generate workable UML diagrams but also to 
-   write an application with the system design document. It also adopts the fundamental [OOP] concept: abstraction, encapsulation, inheritance and polymorphism and a simple design pattern [state design pattern].There are many functions in this UMLeditor and each one corresponds to a state. For instance, the selection tool is to select serveral class or use-case diagrams and the generalization tool is to create a 'is-a' relationship between classes by drawing a line. To complete this functionality, typically we need to use lots of **switch** **case**.  
+   write an application with the system design document. It also adopts the fundamental [OOP] concept: abstraction, encapsulation, inheritance and polymorphism and a simple design pattern [state design pattern].
+   
+   There are many functions in this UMLeditor and each one corresponds to a state. For instance, the selection tool is to select serveral class or use-case diagrams and the generalization tool is to create a 'is-a' relationship between classes by drawing a line. To complete this functionality, typically we need to use lots of **switch** **case**.
+   
    However, this makes the code hard to be read and extended. Thus I created an abstract class called **Mouse_Mode.java**, 
 it included several typical evnets like **mousePressed**,  **mouseDragged**, **mouseReleased** and **mouseClicked**. But they are all empty method. As a new state is created, it can override these methods to perform particular tasks. By adopting this pattern, code is much easier to be maintianed.
 
